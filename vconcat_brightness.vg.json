@@ -28,7 +28,6 @@
         "latitude": {"field": "latitude", "type": "quantitative"},
         "tooltip": [{"field": "longitude", "type": "quantitative", "title": "Longitude"},
           {"field": "latitude", "type": "quantitative", "title": "Latitude"},
-          {"field": "longitude", "type": "quantitative", "title": "Longitude"},
           {"field": "brightness", "type": "quantitative", "title": "MODIS brightness"},
           {"field": "frp", "type": "quantitative", "title": "FRP"},
           {"field": "acq_date", "timeUnit": "monthdate", "title": "Date"},
