@@ -28,7 +28,7 @@ h1 {
 /* left part */
 #vconcat_brightness {
     width: 40vw;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .pure-u-1-2 {
@@ -52,7 +52,7 @@ h1 {
 
 /* right bottom part */
 #title1 {
-    width: 35vw;
+    width: 30vw;
     margin-left: 250px;
     margin-top: 20px;
 }
