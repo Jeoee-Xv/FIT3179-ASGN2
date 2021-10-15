@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "The Most Dangerous Forest Fires",
+    "data":{ 
+        "url": "https://raw.githubusercontent.com/Jeoee-Xv/FIT3179-ASGN2/main/modis_2020_Australia.csv"
+    },
+    "transform": [
+        {"calculate": "parseInt(datum.frp)", "as": "frp"},
+        {    
+            "window": [{
+                "op": "rank",
+                "as": "rank"
+            }],
+                "sort": [{"field": "frp", "order": "descending"}]
+                }, {
+                    "filter": "datum.rank <= 20"
+                }
+    ],
+    "mark": {"type": "point", "tooltip": {"content": "data"}},
+    "encoding": {
+        "x": {
+            "field": "brightness",
+            "type": "quantitative",
+            "axis":{"title": "MODIS Brightness Temperature"},
+            "scale": {"domain": [400, 500]}
+        },
+        "y": {
+            "field": "frp",
+            "type": "quantitative",
+            "axis": {"title": "Fire Radiative Power"}
+        }
+    }
+}    

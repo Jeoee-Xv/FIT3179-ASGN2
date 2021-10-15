@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+    
+    <link rel="stylesheet" href="layout.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vconcat_brightness.js"></script>
+    <script src="Top_10_days.js"></script>
+    <script src="Top_20_fires.js"></script>
+
+</head>
+
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <img src="D:\Monash\2021 S2\FIT3179\Assignment\Assignment 2\Visualization\Pictures\Title Graph.png" />
+        </div>    
+        <div class="pure-u-1">
+            <div id='Heading'>
+                <h1>Forest Fire</h1>
+                <p><b>Forest fire is one of the most serious natural disaster</b>, it will burn the forest, reduce the use value of the forest, and destroy the forest ecosystem. Moreover, it will burn down all kinds of buildings and threaten the safety of villages and cities nearby the forest.
+                    <br> <br> Australia is a country that suffer from forest fire almost every year. Becasue Australia's climate is general hot and dry, this is very prone for forests to burn 
+                </p>
+            </div>
+        </div>
+
+        <div class="pure-u-1-2">
+            <div id="vconcat_brightness">
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+                <div id='Explain1'>
+                <p><span class= 'title'><b>This map shows the fire burned in Australia through out 2020</b></span>
+                    <br> <br> For a more specific view, please use the brush in the line chart to filter out the time period you want to discover.
+                <p><span class= 'highlight'><b>Brightness (MODIS Brightness Temperature)</b></span>
+                    <br> <br> The temperature measured in Kelvin calculated from the top-of-the-atmosphere radiances it can clearly show the temperature differences with the surrounding area.
+                </p>
+                <p><span class= 'highlight'><b>FRP(Fire Radiative Power)</b></span>
+                    <br> <br> It quantifies burned biomass and measures the radiant energy released per time unit by burning vegetation. 
+                </p>
+            </div>
+
+        <div class="pure-u-1-3">
+            <div id='title1'>
+            <p><span class= 'title'><b>These two graphs below show some top values of forest fire in 2020</b></span>
+            </p>
+            </div>
+            <div id='Top_10_days'>
+            </div>
+            <div id='Top_20_fires'>
+            </div>
+            <div id='Explain2'>
+                Fire happen most frequent and severe in January 
+                <br> <br>because of the extreme hot weather in Australia summer
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

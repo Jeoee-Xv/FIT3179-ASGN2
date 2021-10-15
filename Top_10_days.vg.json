@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "The Most Forest Fires Days",
+    "data":{ 
+        "url": "https://raw.githubusercontent.com/Jeoee-Xv/FIT3179-ASGN2/main/modis_2020_Australia.csv"
+    },
+    "transform": [
+        {   
+            "aggregate": [{
+             "op": "count",
+             "as": "Number of fires"
+            }],
+            "groupby": ["acq_date"]
+            }, 
+            {
+                "window": [{
+                    "op": "rank",
+                    "as": "rank"
+                }],
+                "sort": [{"field": "Number of fires", "order": "descending"}]
+                }, {
+                    "filter": "datum.rank <= 10"
+                }
+    ],
+    "mark": {"type": "bar", "tooltip": {"content": "data"}},
+    "encoding": {
+        "x": {
+            "field": "acq_date",
+            "type": "nominal",
+            "axis": {"title": "Date"}
+        },
+        "y": {
+            "field": "Number of fires",
+            "type": "quantitative"
+        }
+    }
+}    
