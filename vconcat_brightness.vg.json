@@ -31,7 +31,6 @@
           {"field": "brightness", "type": "quantitative", "title": "MODIS brightness"},
           {"field": "frp", "type": "quantitative", "title": "FRP"},
           {"field": "acq_date", "timeUnit": "monthdate", "title": "Date"},
-          {"field": "acq_time", "timeUnit": "minutes", "title": "Time"},
           {"field": "daynight", "type": "nominal", "title": "Day/Night"}
           ],
       "size": {
