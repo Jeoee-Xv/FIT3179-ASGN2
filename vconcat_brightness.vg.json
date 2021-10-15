@@ -22,10 +22,19 @@
       "data": {
         "url": "https://raw.githubusercontent.com/Jeoee-Xv/FIT3179-ASGN2/main/modis_2020_Australia.csv"
         },
-      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "mark": {"type": "circle"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
+        "tooltip": [{"field": "longitude", "type": "quantitative", "title": "Longitude"},
+          {"field": "latitude", "type": "quantitative", "title": "Latitude"},
+          {"field": "longitude", "type": "quantitative", "title": "Longitude"},
+          {"field": "brightness", "type": "quantitative", "title": "MODIS brightness"},
+          {"field": "frp", "type": "quantitative", "title": "FRP"},
+          {"field": "acq_date", "type": "nominal", "title": "Date"},
+          {"field": "acq_time", "type": "nominal", "title": "Time"},
+          {"field": "daynight", "type": "nominal", "title": "Day/Night"}
+          ],
       "size": {
           "field": "frp",
           "type": "quantitative",
